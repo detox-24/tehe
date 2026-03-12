@@ -1,0 +1,59 @@
+# === terminal ===
+super + Return
+kitty
+
+# === close/kill window ===
+super + {_,shift + }q
+bspc node -{c,k}
+
+# === reload sxhkd ===
+super + Escape
+pkill -USR1 -x sxhkd
+
+# === restart bspwm ===
+super + shift + r
+bspc wm -r
+
+# === quit bspwm ===
+super + shift + e
+bspc quit
+
+# === rofi launcher ===
+super + d
+rofi -show drun
+
+# === rofi window switcher ===
+alt + Tab
+rofi -show window
+
+# === focus/swap node in direction ===
+super + {_,shift + }{h,j,k,l}
+bspc node -{f,s} {west,south,north,east}
+
+# === focus/send to desktop ===
+super + {_,shift + }{1-9,0}
+bspc {desktop -f,node -d} '^{1-9,10}'
+
+# === toggle floating ===
+super + space
+bspc node -t '~floating'
+
+# === toggle fullscreen ===
+super + f
+bspc node -t '~fullscreen'
+
+# === toggle tiled/monocle layout ===
+super + m
+bspc desktop -l next
+
+# === preselect direction ===
+super + ctrl + {h,j,k,l}
+bspc node -p {west,south,north,east}
+
+# === cancel preselection ===
+super + ctrl + space
+bspc node -p cancel
+
+# === resize window ===
+super + alt + {h,j,k,l}
+bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
