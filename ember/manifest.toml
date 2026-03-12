@@ -1,0 +1,22 @@
+[meta]
+name = "ember"
+author = "sathiya"
+version = "0.2.0"
+wm = "bspwm"
+display_server = ["x11"]
+colorscheme = "ember"
+components = ["bspwm", "polybar", "rofi", "dunst", "kitty", "picom"]
+tags = ["warm", "dark", "crimson"]
+description = "warm crimson ember tones with deep red accents"
+
+[dependencies]
+packages = ["bspwm", "sxhkd", "polybar", "rofi", "dunst", "kitty", "picom", "feh"]
+fonts = ["JetBrainsMono Nerd Font"]
+icons = []
+
+[wallpaper]
+file = "walls/wall.png"
+setter = "feh"
+
+[hooks]
+post_apply = []

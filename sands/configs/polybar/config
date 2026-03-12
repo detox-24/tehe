@@ -1,0 +1,75 @@
+[colors]
+background = #1C160E
+background-alt = #4A3723
+foreground = #CB8E37
+primary = #A4793F
+secondary = #694C2C
+alert = #93662E
+disabled = #795F40
+
+[bar/main]
+width = 100%
+height = 28
+radius = 0
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+padding-left = 2
+padding-right = 2
+module-margin = 1
+separator = ·
+separator-foreground = ${colors.disabled}
+font-0 = JetBrainsMono Nerd Font:size=10;3
+modules-left = bspwm
+modules-center = date
+modules-right = pulseaudio memory cpu
+
+[module/bspwm]
+type = internal/bspwm
+label-focused = %name%
+label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.foreground}
+label-focused-padding = 2
+label-occupied = %name%
+label-occupied-padding = 2
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+label-empty = %name%
+label-empty-foreground = ${colors.disabled}
+label-empty-padding = 2
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage_used:2%%
+
+[module/date]
+type = internal/date
+interval = 1
+date = %a %b %d
+time = %H:%M
+label = %date%  %time%
+label-foreground = ${colors.foreground}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume-prefix = "  "
+format-volume-prefix-foreground = ${colors.primary}
+format-volume = <label-volume>
+label-volume = %percentage%%
+label-muted = muted
+label-muted-foreground = ${colors.disabled}
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = false

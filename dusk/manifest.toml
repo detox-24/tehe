@@ -1,0 +1,22 @@
+[meta]
+name = "dusk"
+author = "sathiya"
+version = "0.2.0"
+wm = "bspwm"
+display_server = ["x11"]
+colorscheme = "dusk"
+components = ["bspwm", "polybar", "rofi", "dunst", "kitty", "picom"]
+tags = ["purple", "dark", "amber"]
+description = "deep dusk purple with warm amber highlights"
+
+[dependencies]
+packages = ["bspwm", "sxhkd", "polybar", "rofi", "dunst", "kitty", "picom", "feh"]
+fonts = ["JetBrainsMono Nerd Font"]
+icons = []
+
+[wallpaper]
+file = "walls/wall.png"
+setter = "feh"
+
+[hooks]
+post_apply = []

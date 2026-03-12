@@ -1,0 +1,22 @@
+[meta]
+name = "sands"
+author = "sathiya"
+version = "0.2.0"
+wm = "bspwm"
+display_server = ["x11"]
+colorscheme = "sands"
+components = ["bspwm", "polybar", "rofi", "dunst", "kitty", "picom"]
+tags = ["earthy", "dark", "golden"]
+description = "earthy golden-brown desert sands with warm tones"
+
+[dependencies]
+packages = ["bspwm", "sxhkd", "polybar", "rofi", "dunst", "kitty", "picom", "feh"]
+fonts = ["JetBrainsMono Nerd Font"]
+icons = []
+
+[wallpaper]
+file = "walls/wall.png"
+setter = "feh"
+
+[hooks]
+post_apply = []

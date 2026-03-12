@@ -1,0 +1,26 @@
+[global]
+    width = 300
+    height = 100
+    offset = 16x48
+    origin = top-right
+    font = JetBrainsMono Nerd Font 10
+    frame_width = 2
+    frame_color = "#CB8E37"
+    separator_color = frame
+    corner_radius = 4
+
+[urgency_low]
+    background = "#1C160E"
+    foreground = "#CB8E37"
+    timeout = 5
+
+[urgency_normal]
+    background = "#1C160E"
+    foreground = "#CB8E37"
+    timeout = 10
+
+[urgency_critical]
+    background = "#4A3723"
+    foreground = "#CB8E37"
+    frame_color = "#93662E"
+    timeout = 0

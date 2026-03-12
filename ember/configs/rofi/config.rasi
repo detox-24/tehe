@@ -1,0 +1,47 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+* {
+    bg:       #240E0A;
+    bg-alt:   #592A24;
+    fg:       #EB946D;
+    accent:   #D36C61;
+    urgent:   #A25560;
+}
+
+window {
+    width: 500px;
+    border: 2px;
+    border-color: @accent;
+    background-color: @bg;
+}
+
+mainbox {
+    background-color: @bg;
+}
+
+inputbar {
+    padding: 8px;
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+listview {
+    lines: 8;
+    padding: 4px;
+    background-color: @bg;
+}
+
+element {
+    padding: 8px;
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
