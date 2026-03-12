@@ -5,12 +5,12 @@ version = "0.2.0"
 wm = "bspwm"
 display_server = ["x11"]
 colorscheme = "dusk"
-components = ["bspwm", "polybar", "rofi", "dunst", "kitty", "picom"]
+components = ["bspwm", "polybar", "rofi", "dunst", "alacritty", "picom"]
 tags = ["purple", "dark", "amber"]
 description = "deep dusk purple with warm amber highlights"
 
 [dependencies]
-packages = ["bspwm", "sxhkd", "polybar", "rofi", "dunst", "kitty", "picom", "feh"]
+packages = ["bspwm", "sxhkd", "polybar", "rofi", "dunst", "alacritty", "picom", "feh"]
 fonts = ["JetBrainsMono Nerd Font"]
 icons = []
 

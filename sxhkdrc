@@ -1,6 +1,6 @@
 # === terminal ===
 super + Return
-kitty
+alacritty
 
 # === close/kill window ===
 super + {_,shift + }q
