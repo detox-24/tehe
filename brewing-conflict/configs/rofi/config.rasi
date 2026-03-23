@@ -1,0 +1,112 @@
+/* PALETTE (strict):
+ * background  = #010101
+ * background2 = #2B2425
+ * foreground  = #F3E196
+ * foreground2 = #DBC9A8
+ * color0  = #010101
+ * color1  = #2B2425
+ * color2  = #544240
+ * color3  = #6B4C58
+ * color4  = #754C66
+ * color5  = #87586B
+ * color6  = #8A683C
+ * color7  = #976970
+ * color8  = #9E6A5E
+ * color9  = #9E7481
+ * color10 = #B08A6B
+ * color11 = #D0A663
+ * color12 = #D7B16E
+ * color13 = #E8C976
+ * color14 = #DBC9A8
+ * color15 = #F3E196
+ */
+
+configuration {
+  modi: "drun,run,window";
+  show-icons: true;
+  icon-theme: "Papirus";
+  font: "JetBrainsMono Nerd Font 11";
+  drun-display-format: "{icon}  {name}";
+}
+
+* {
+  background:     #010101;
+  background-alt: #2B2425;
+  foreground:     #F3E196;
+  foreground-alt: #DBC9A8;
+  primary:        #6B4C58;
+  secondary:      #754C66;
+  urgent:         #8A683C;
+  border:         #87586B;
+}
+
+window {
+  location: center;
+  anchor: center;
+  width: 500px;
+  border: 2px;
+  border-color: @primary;
+  border-radius: 8px;
+  background-color: @background;
+  padding: 12px;
+}
+
+mainbox {
+  spacing: 8px;
+  background-color: transparent;
+}
+
+inputbar {
+  background-color: @background-alt;
+  text-color: @foreground;
+  border: 0px 0px 1px 0px;
+  border-color: @border;
+  padding: 10px;
+  spacing: 8px;
+}
+
+prompt {
+  text-color: @secondary;
+}
+
+entry {
+  placeholder: "search...";
+  placeholder-color: @foreground-alt;
+  text-color: @foreground;
+}
+
+listview {
+  lines: 8;
+  columns: 1;
+  dynamic: false;
+  scrollbar: false;
+  spacing: 4px;
+  padding: 2px;
+}
+
+element {
+  background-color: transparent;
+  text-color: @foreground-alt;
+  padding: 8px 10px;
+  border: 0px;
+}
+
+element selected {
+  background-color: rgba (43, 36, 37, 20%);
+  text-color: @foreground;
+  border: 0px 0px 0px 3px;
+  border-color: @primary;
+}
+
+element urgent {
+  text-color: @urgent;
+}
+
+element-icon {
+  size: 1.0em;
+  margin: 0px 8px 0px 0px;
+}
+
+element-text {
+  vertical-align: 0.5;
+}

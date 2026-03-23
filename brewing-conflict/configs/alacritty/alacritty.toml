@@ -1,0 +1,83 @@
+# PALETTE (strict):
+# background  = #010101
+# background2 = #2B2425
+# foreground  = #F3E196
+# foreground2 = #DBC9A8
+# color0  = #010101
+# color1  = #2B2425
+# color2  = #544240
+# color3  = #6B4C58
+# color4  = #754C66
+# color5  = #87586B
+# color6  = #8A683C
+# color7  = #976970
+# color8  = #9E6A5E
+# color9  = #9E7481
+# color10 = #B08A6B
+# color11 = #D0A663
+# color12 = #D7B16E
+# color13 = #E8C976
+# color14 = #DBC9A8
+# color15 = #F3E196
+
+[window]
+opacity = 0.92
+decorations = "None"
+
+[window.padding]
+x = 12
+y = 10
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
+
+[font]
+size = 12
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+
+[cursor.blinking]
+interval = 750
+
+[scrolling]
+history = 5000
+
+[terminal]
+
+[colors.primary]
+background = "#010101"
+foreground = "#F3E196"
+
+[colors.normal]
+black   = "#010101"
+red     = "#2B2425"
+green   = "#544240"
+yellow  = "#6B4C58"
+blue    = "#754C66"
+magenta = "#87586B"
+cyan    = "#8A683C"
+white   = "#976970"
+
+[colors.bright]
+black   = "#9E6A5E"
+red     = "#9E7481"
+green   = "#B08A6B"
+yellow  = "#D0A663"
+blue    = "#D7B16E"
+magenta = "#E8C976"
+cyan    = "#DBC9A8"
+white   = "#F3E196"

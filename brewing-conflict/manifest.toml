@@ -1,0 +1,22 @@
+[meta]
+name = "brewing-conflict"
+author = "sathiya"
+version = "0.2.0"
+wm = "bspwm"
+display_server = ["x11"]
+colorscheme = "vesper-arcade"
+components = ["bspwm", "polybar", "rofi", "dunst", "alacritty", "picom"]
+tags = ["amber", "dark", "wistful"]
+description = "Amber dusk drifts through stone arches while violet clouds settle into quiet night."
+
+[dependencies]
+packages = ["bspwm", "sxhkd", "polybar", "rofi", "dunst", "alacritty", "picom", "feh"]
+fonts = ["JetBrainsMono Nerd Font"]
+icons = []
+
+[wallpaper]
+file = "walls/wall.png"
+setter = "feh"
+
+[hooks]
+post_apply = []
