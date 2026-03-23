@@ -1,0 +1,117 @@
+/* palette:
+ * background  = #05070A
+ * background2 = #191A25
+ * foreground  = #F6E9C8
+ * foreground2 = #D9C49E
+ * color0      = #0C1018
+ * color1      = #C47A55
+ * color2      = #A87A8F
+ * color3      = #E1B56A
+ * color4      = #9C8CC1
+ * color5      = #6E6077
+ * color6      = #F29A7A
+ * color7      = #FFF2D6
+ * color8      = #06080D
+ * color9      = #8A563C
+ * color10     = #735464
+ * color11     = #A8844F
+ * color12     = #6D6288
+ * color13     = #4B4252
+ * color14     = #B56C53
+ * color15     = #CDBFA7
+ */
+
+configuration {
+  modi: "drun,run,window";
+  show-icons: true;
+  icon-theme: "Papirus";
+  font: "JetBrainsMono Nerd Font 11";
+  drun-display-format: "{icon}  {name}";
+  display-drun: " apps";
+  display-run: " run";
+  display-window: " win";
+  kb-row-up: "Up,Control+k";
+  kb-row-down: "Down,Control+j";
+}
+
+* {
+  background:     #05070A;
+  background-alt: #191A25;
+  foreground:     #F6E9C8;
+  foreground-alt: #D9C49E;
+  primary:        #C47A55;
+  secondary:      #A87A8F;
+  urgent:         #F29A7A;
+  border:         #6E6077;
+}
+
+window {
+  location: center;
+  anchor: center;
+  width: 500px;
+  border: 2px;
+  border-color: @primary;
+  border-radius: 8px;
+  background-color: @background;
+  padding: 12px;
+}
+
+mainbox {
+  spacing: 8px;
+  background-color: transparent;
+}
+
+inputbar {
+  background-color: @background-alt;
+  text-color: @foreground;
+  border: 0px 0px 1px 0px;
+  border-color: @border;
+  padding: 10px;
+  spacing: 8px;
+}
+
+prompt {
+  text-color: @secondary;
+}
+
+entry {
+  placeholder: "search...";
+  placeholder-color: @foreground-alt;
+  text-color: @foreground;
+}
+
+listview {
+  lines: 8;
+  columns: 1;
+  dynamic: false;
+  scrollbar: false;
+  spacing: 4px;
+  padding: 2px;
+}
+
+element {
+  background-color: transparent;
+  text-color: @foreground-alt;
+  padding: 8px 10px;
+  border: 0px;
+}
+
+element selected {
+  background-color: #C47A5533;
+  text-color: @foreground;
+  border: 0px 0px 0px 3px;
+  border-color: @primary;
+}
+
+element urgent {
+  text-color: @urgent;
+}
+
+element-icon {
+  size: 1.0em;
+  margin: 0px 8px 0px 0px;
+}
+
+element-text {
+  vertical-align: 0.5;
+}

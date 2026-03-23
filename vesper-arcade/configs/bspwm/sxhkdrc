@@ -1,0 +1,72 @@
+# palette:
+# background  = #05070A
+# background2 = #191A25
+# foreground  = #F6E9C8
+# foreground2 = #D9C49E
+# color0      = #0C1018
+# color1      = #C47A55
+# color2      = #A87A8F
+# color3      = #E1B56A
+# color4      = #9C8CC1
+# color5      = #6E6077
+# color6      = #F29A7A
+# color7      = #FFF2D6
+# color8      = #06080D
+# color9      = #8A563C
+# color10     = #735464
+# color11     = #A8844F
+# color12     = #6D6288
+# color13     = #4B4252
+# color14     = #B56C53
+# color15     = #CDBFA7
+
+super + Return
+    alacritty
+
+super + space
+    rofi -show drun
+
+super + q
+    bspc node -c
+
+super + f
+    bspc node -t fullscreen
+
+super + t
+    bspc node -t ~floating
+
+super + {1-9,0}
+    bspc desktop -f '^{1-10}'
+
+super + shift + {1-9,0}
+    bspc node -d '^{1-10}'
+
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+super + shift + {h,j,k,l}
+    bspc node -s {west,south,north,east}
+
+super + shift + r
+    bspc wm -r
+
+super + shift + q
+    bspc quit
+
+XF86AudioRaiseVolume
+    amixer -q set Master 5%+
+
+XF86AudioLowerVolume
+    amixer -q set Master 5%-
+
+XF86AudioMute
+    amixer -q set Master toggle
+
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+Print
+    scrot "$HOME/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"

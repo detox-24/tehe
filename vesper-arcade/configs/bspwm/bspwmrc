@@ -1,0 +1,51 @@
+#!/bin/sh
+# palette:
+# background  = #05070A
+# background2 = #191A25
+# foreground  = #F6E9C8
+# foreground2 = #D9C49E
+# color0      = #0C1018
+# color1      = #C47A55
+# color2      = #A87A8F
+# color3      = #E1B56A
+# color4      = #9C8CC1
+# color5      = #6E6077
+# color6      = #F29A7A
+# color7      = #FFF2D6
+# color8      = #06080D
+# color9      = #8A563C
+# color10     = #735464
+# color11     = #A8844F
+# color12     = #6D6288
+# color13     = #4B4252
+# color14     = #B56C53
+# color15     = #CDBFA7
+
+pgrep -x sxhkd >/dev/null || sxhkd &
+pkill -x polybar >/dev/null 2>&1
+polybar main >/dev/null 2>&1 &
+pkill -x picom >/dev/null 2>&1
+picom --config "$HOME/.config/picom/picom.conf" >/dev/null 2>&1 &
+feh --bg-fill "$HOME/.config/rixi/walls/wall.png" >/dev/null 2>&1 || true
+
+bspc config border_width         2
+bspc config window_gap           6
+bspc config top_padding          12
+bspc config bottom_padding       12
+bspc config left_padding         12
+bspc config right_padding        12
+bspc config split_ratio          0.52
+bspc config single_monocle       true
+bspc config click_to_focus       true
+bspc config borderless_monocle   true
+bspc config gapless_monocle      false
+
+bspc config focused_border_color   "#C47A55"
+bspc config normal_border_color    "#6E6077"
+bspc config active_border_color    "#A87A8F"
+bspc config presel_feedback_color  "#F29A7A"
+bspc config urgent_border_color    "#F29A7A"
+
+# Rounded corners are handled by picom with radius 6.
+primary_monitor="$(bspc query -M --names | head -n1)"
+[ -n "$primary_monitor" ] && bspc monitor "$primary_monitor" -d I II III IV V VI VII VIII IX X
